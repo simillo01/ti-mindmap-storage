@@ -1,0 +1,137 @@
+{
+    "name": "ArcaneDoor Campaign",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in ArcaneDoor espionage campaign targeting perimeter network devices.",
+    "filters": {
+        "platforms": [
+            "network",
+            "windows"
+        ],
+        "stages": [
+            "stage-1",
+            "stage-2"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": true,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1037",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Line Runner persistence mechanism allowing reestablishment of access after reboots and upgrades.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1615",
+            "tactic": "impact",
+            "color": "",
+            "comment": "Execution of device reboots via CVE-2024-20353 to prevent generation of forensic crash dumps.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1140",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Use of Base64 obfuscation for payloads executed in memory.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1071.001",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "HTTP C2 channel used by UAT4356 via modified network device functions.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1556",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Hooking AAA function for authentication bypass using a magic number.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1040",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Network sniffing to capture and exfiltrate network traffic.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Upload and execution of shellcode via the Line Dancer implant.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Execution of CLI commands on compromised perimeter devices.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1070.004",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Removal of files to evade detection and hinder forensic analysis.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
