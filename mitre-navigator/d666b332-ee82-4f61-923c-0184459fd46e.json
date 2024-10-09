@@ -1,0 +1,172 @@
+{
+    "name": "ArcaneDoor Campaign TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Key TTPs from the ArcaneDoor espionage campaign targeting perimeter network devices.",
+    "filters": {
+        "platforms": [
+            "network"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1037",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Persistence mechanism via 'Line Runner' using legacy VPN client pre-loading functionality.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1653",
+            "tactic": "impact",
+            "color": "",
+            "comment": "Reboot action conducted through CVE-2024-20353 to deploy persistent mechanisms like 'Line Runner'.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1140",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Base64 obfuscation used to decode payloads.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T0874",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Hooking of the processHostScanReply() function to run payloads in memory.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1070.004",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Removal of files and logs to prevent forensic analysis.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Transfer tools like 'Line Dancer' and 'Line Runner' to compromised systems.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1046",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Exploitation of vulnerabilities to scan and interact with network services.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1056",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Modifications to AAA for unauthorized access.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Execution of CLI commands using 'Line Dancer' for configuring and maintaining control over devices.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Injection of code into processes to persist control, such as AAA and crash dump.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1560",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Packaging data in zip files for exfiltration and persistence mechanisms like 'Line Runner'.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1552",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Gaining access through the manipulation of AAA mechanisms and use of magic numbers.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1071.001",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Communication with C2 infrastructure via HTTP protocol, using a one-way backdoor mechanism.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
