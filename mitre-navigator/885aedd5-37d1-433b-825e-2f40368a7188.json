@@ -1,0 +1,84 @@
+{
+    "name": "Phishing Campaign: False Judicial Summons",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Phishing campaign involving false judicial summons to trick recipients.",
+    "filters": {
+        "platforms": [
+            "Windows",
+            "Linux",
+            "macOS"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "all"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1566",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Phishing campaign involving false judicial summons to trick recipients.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1566.001",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "The summons includes personalization such as the signature of a police chief to appear legitimate.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1056.003",
+            "tactic": "collection",
+            "color": "",
+            "comment": "The tactic involves alarming the victim to collect personal information.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1266",
+            "tactic": "collection",
+            "color": "",
+            "comment": "The attack uses a false legal framework to collect victims' data, implying the use of information repositories.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
