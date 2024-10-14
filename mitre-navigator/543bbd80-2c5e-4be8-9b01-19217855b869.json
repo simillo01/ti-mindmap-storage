@@ -1,0 +1,87 @@
+{
+    "name": "False Judicial Summons Phishing Campaign",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Phishing campaign using false judicial summons to manipulate victims.",
+    "filters": {
+        "platforms": [
+            "windows",
+            "linux",
+            "mac"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": true,
+        "countUnscored": true,
+        "expandedSubtechniques": false
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1566",
+            "tactic": "initial-access",
+            "color": "#FF6666",
+            "comment": "Phishing campaign employs emails pretending to be from police to induce response.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1566.001",
+            "tactic": "initial-access",
+            "color": "#FF6666",
+            "comment": "Spear phishing attachment using official branding like law enforcement logos.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1204",
+            "tactic": "execution",
+            "color": "#FFE766",
+            "comment": "User execution triggered by victim's interaction with phishing email.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [
+        {
+            "label": "High Risk",
+            "color": "#FF6666"
+        },
+        {
+            "label": "Medium Risk",
+            "color": "#FFE766"
+        },
+        {
+            "label": "Low Risk",
+            "color": "#8EC843"
+        }
+    ],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": true,
+    "tacticRowBackground": "#dddddd"
+}
