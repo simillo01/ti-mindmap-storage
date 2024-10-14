@@ -1,0 +1,132 @@
+{
+    "name": "BlackSuit Ransomware TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Layer for understanding TTPs involved in BlackSuit Ransomware incident based on DFIR Report",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1059.001",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Use of PowerShell scripts for various activities including process execution and data collection via Get-DataInfo.ps1.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Suspected use of Cobalt Strike for process injection to hide malicious activity inside legitimate processes.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1003.001",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Access to LSASS memory to dump credentials, likely using Rubeus executed in a process injected by Cobalt Strike.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1558.003",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Conducted using Rubeus, multiple Kerberos ticket requests observed with RC4 encryption.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1018",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Performed using various Windows utilities and tools like ADFind and Sharphound for Active Directory enumeration.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1570",
+            "tactic": "lateral-movement",
+            "color": "",
+            "comment": "Lateral movement through SMB shares and remote execution services, using tools like Cobalt Strike.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1486",
+            "tactic": "impact",
+            "color": "",
+            "comment": "Deployment of BlackSuit ransomware across systems, encrypting files and dropping a ransom note.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1490",
+            "tactic": "impact",
+            "color": "",
+            "comment": "Deletion of shadow copies using vssadmin prior to ransomware execution for system recovery inhibition.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1090",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Use of SystemBC for command and control communications and proxying traffic to conceal activities.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
